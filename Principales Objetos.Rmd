@@ -7,7 +7,7 @@ output: html_notebook
 
 ## Algunos comandos para generarlos.
 
-Los escalares son vectores en R de longitud 1. Para encadenar estos u otros objetos podemos usar el comando 'c'
+Los *escalares* son **vectores** en R de longitud 1. Para encadenar estos u otros objetos podemos usar el comando 'c'.
 ```{r include = TRUE}  
 v <- c(1, 2, 3, 4, 5) 
 v
@@ -55,10 +55,10 @@ c(1:4) + c(1:7)
 
 ## Valores especiales
 
-Na: Not Avaiable
-NaN: Not a Number
-Inf: Infinity
-Null: se corresponde al vacío y es ignorado. Es útil a la hora de crear un objeto que completaremos poco a poco.
+* Na: Not Avaiable
+* NaN: Not a Number
+* Inf: Infinity
+* Null: se corresponde al vacío y es ignorado. Es útil a la hora de crear un objeto que completaremos poco a poco.
 
 ```{r include = TRUE}
 x <- c(NA, NaN, Inf, NULL, 4, 0)
@@ -109,7 +109,7 @@ which(x > 20)
 
 # Matrices
 
-Los vectores no son matrices con una fila o con una columna.
+Los vectores **no**m son matrices con una fila o con una columna.
 
 A pesar de ser objetos similares, las matrices constan de dos atributos más: número de filas y número de columnas.
 

@@ -7,19 +7,19 @@ Breve resumen del manejo de las funciones básicas de probabilidad con las funci
 
 ## Nombres o 'alias' de las distribuciones más frecuentes
 
-Distribución Binomial:        binom
+* Distribución Binomial:        binom
 
-Distribución de Poisson:      pois
+* Distribución de Poisson:      pois
 
-Distribución normal:          norm
+* Distribución normal:          norm
 
-Distribución exponencial:     exp
+* Distribución exponencial:     exp
 
-Distribución t de Student:    t
+* Distribución t de Student:    t
 
-Distribución Chi cuadrado :   chisq
+* Distribución Chi cuadrado :   chisq
 
-Distribución F :              f  
+* Distribución F :              f  
 
 Para obtener una lista completa de las distribuciones que R maneja basta escribir help("Distributions""):
 
@@ -27,13 +27,13 @@ Para obtener una lista completa de las distribuciones que R maneja basta escribi
 
 Para cada una de las distribuciones, tenemos cuatro funciones relacionadas. En R tenemos un prefijo para acceder a cada una de ellas.
 
-Función de distribución:                                                      p
+* Función de distribución:                                                      p
 
-Función cuantílica (la que nos da el percentil):                              q
+* Función cuantílica (la que nos da el percentil):                              q
 
-Función de densidad (distribuciones continuas) o probabilidad (discretas):    d
+* Función de densidad (distribuciones continuas) o probabilidad (discretas):    d
 
-Generación de números aleatorios:                                             r
+* Generación de números aleatorios:                                             r
 
 
 
