@@ -22,4 +22,26 @@ head(XTC, 3)
 head(Controles, 3)
 ```
 
+Antes de nada, observemos que el los datos procedentes del grupo de estudio del éxtasis tienen una columna extra llamada 'id' que no aporta información. La eliminaremos.
+
+```{r}
+XTC$id <- NULL
+```
+
+
+Añadimos a cada data.frame una variable extra que nos indique la procedencia de los datos antes de junotarlos.
+
+```{r}
+Cannabis$Group <- 'Cannabis'
+XTC$Group <- 'XTC'
+Controles$Group <- 'Control'
+```
+Ahora fusionaremos los datos en un único data.frame. Lo haremos en dos pasos.
+
+```{r}
+temporal <- rbind.data.frame(XTC, Cannabis)
+Datos <- rbind(temporal, Controles)
+head(Datos)
+```
+
 
