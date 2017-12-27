@@ -1,0 +1,25 @@
+---
+title: "Datos drogadicción IMIM"
+output: html_notebook
+---
+
+Cargamos los datos del estudio a partir de archivos csv y comprobamos que la importación se ha realizado correctamente.
+
+```{r}
+Cannabis <- read.csv('Cannabis.csv')
+XTC <- read.csv('XTC.csv')
+Controles <- read.csv('Controles.csv')
+```
+```{r}
+head(Cannabis, 3)
+```
+
+```{r}
+head(XTC, 3)
+```
+
+```{r}
+head(Controles, 3)
+```
+
+
