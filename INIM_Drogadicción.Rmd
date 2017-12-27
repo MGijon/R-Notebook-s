@@ -29,7 +29,8 @@ XTC$id <- NULL
 ```
 
 
-Añadimos a cada data.frame una variable extra que nos indique la procedencia de los datos antes de junotarlos.
+Añadimos a cada data.frame una variable extra que nos indique la procedencia de los datos antes de juntarlos. ESTA VARIABLE DEBERÁ SER UN FACTOR CON EL GRUPO
+DEL ÉXTASIS COMO REFERENCIA.
 
 ```{r}
 Cannabis$Group <- 'Cannabis'
@@ -43,5 +44,39 @@ temporal <- rbind.data.frame(XTC, Cannabis)
 Datos <- rbind(temporal, Controles)
 head(Datos)
 ```
+
+
+* ORDENEMOS EL DATA FRAME POR EL GRUPO DE ESTUDIO Y EL IDENTIFICADOR DE VOLUNTARIO.
+
+* CUÁNTOS CASOS (FILAS) TIENE EL DATA FRAME ENTERO Y CUANTOS CASOS SI SE DESCARTA AQUELLOS CON ALGÚN DATO PERDIDO?
+
+* CONVERTIMOS LA VARIABLE GÉNERO EN UN FACTOR CUYOS VALORES SON 'MALE' (SEX == 1) O 'FEMALE' (SEX == 2)
+
+* USAMOS LA FUNCIÓN CUT PARA CREAR UNA NUEVA VARIABLE CATEGÓRICA QUE CONTENGA LA EDAD DE LOS VOLUNTARIOS : <= 21, 22 - 24, >= 25 AÑOS
+
+* CREAR UNA VARIABLE COMPUESTA (COMPOSITE VARIABLE) USANDO LAS VARIABLES corcub, sdmttoco, lnsscore y waisvocd
+de la siguiente manera: se han de estandarizar las 4 variables (para que tengan media 0 y desviaci ́on est ́andar
+1) y despu ́es sumar los 4 valores (estandarizados).
+
+* MEDIA, MEDIANA, DESVIACIÓN ESTÁNDAR Y RANGO DE LA VARIABLE COMPUESTA DE CADA GRUPO?
+
+* Añadid el data frame creado como nueva tabla a la base de datos StudyENTE.mdb.
+
+* Utilizad la funci ́on sqlQuery (del paquete RODBC) para extraer (solamente) las variables grupo de estudio y edad
+(categorizada) de la nueva tabla de StudyENTE.mdb
+
+* Representad la distribuci ́on condicionada de la variable edad por grupo de estudio mediante un gr ́afico de
+mosaicos.
+
+* Representad la distribuci ́on condicionada de la variable edad por grupo de estudio mediante una tabla de
+contingencia usando la funci ́on CrossTable del paquete descr.
+
+* Cerrad la conexi ́on a la base de datos StudyENTE.mdb.
+
+* Exportad vuestro data frame a un fichero EXCEL de tal manera que el fichero EXCEL contenga una hoja por cada grupo de estudio con nombre igual al grupo de estudio. Las tres hojas del fichero ya no deben contener la variable group. Pod ́eis usar la funci ́on write.xlsx del paquete xlsx o la funci ́on write.xlsx del paquete openxlsx.
+
+
+
+
 
 
