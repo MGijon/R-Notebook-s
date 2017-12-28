@@ -3,7 +3,7 @@ title: "Datos drogadicción IMIM"
 output: html_notebook
 ---
 
-Cargamos los datos del estudio a partir de archivos csv y comprobamos que la importación se ha realizado correctamente.
+* Cargamos los datos del estudio a partir de archivos csv y comprobamos que la importación se ha realizado correctamente.
 
 ```{r}
 Cannabis <- read.csv('Cannabis.csv')
@@ -22,14 +22,14 @@ head(XTC, 3)
 head(Controles, 3)
 ```
 
-Antes de nada, observemos que el los datos procedentes del grupo de estudio del éxtasis tienen una columna extra llamada 'id' que no aporta información. La eliminaremos.
+* Antes de nada, observemos que el los datos procedentes del grupo de estudio del éxtasis tienen una columna extra llamada 'id' que no aporta información. La eliminaremos.
 
 ```{r}
 XTC$id <- NULL
 ```
 
 
-Añadimos a cada data.frame una variable extra que nos indique la procedencia de los datos antes de juntarlos. ESTA VARIABLE DEBERÁ SER UN FACTOR CON EL GRUPO
+* Añadimos a cada data.frame una variable extra que nos indique la procedencia de los datos antes de juntarlos. ESTA VARIABLE DEBERÁ SER UN FACTOR CON EL GRUPO
 DEL ÉXTASIS COMO REFERENCIA.
 
 ```{r}
@@ -37,7 +37,13 @@ Cannabis$Group <- 'Cannabis'
 XTC$Group <- 'XTC'
 Controles$Group <- 'Control'
 ```
-Ahora fusionaremos los datos en un único data.frame. Lo haremos en dos pasos.
+
+```{r}
+Datos$Group <- as.factor(Datos$Group)
+class(Datos$Group)
+```
+
+* Ahora fusionaremos los datos en un único data.frame. Lo haremos en dos pasos.
 
 ```{r}
 temporal <- rbind.data.frame(XTC, Cannabis)
@@ -45,7 +51,7 @@ Datos <- rbind(temporal, Controles)
 head(Datos)
 ```
 
-
+* Ordenamos el data.frame por el grupo de estudio y el identidicafor de voluntario.
 * ORDENEMOS EL DATA FRAME POR EL GRUPO DE ESTUDIO Y EL IDENTIFICADOR DE VOLUNTARIO.
 
 * CUÁNTOS CASOS (FILAS) TIENE EL DATA FRAME ENTERO Y CUANTOS CASOS SI SE DESCARTA AQUELLOS CON ALGÚN DATO PERDIDO?
