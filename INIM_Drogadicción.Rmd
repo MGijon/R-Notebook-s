@@ -52,9 +52,16 @@ head(Datos)
 ```
 
 * Ordenamos el data.frame por el grupo de estudio y el identidicafor de voluntario.
-* ORDENEMOS EL DATA FRAME POR EL GRUPO DE ESTUDIO Y EL IDENTIFICADOR DE VOLUNTARIO.
 
-* CUÁNTOS CASOS (FILAS) TIENE EL DATA FRAME ENTERO Y CUANTOS CASOS SI SE DESCARTA AQUELLOS CON ALGÚN DATO PERDIDO?
+```{r}
+library(dplyr)
+arrange(Datos, Group, vol) 
+```
+
+* ¿Cuántos casos (filas) tiene el data.frame enteros y cuántos si se descartan aquellos con algún dato perdido?
+
+
+***
 
 * CONVERTIMOS LA VARIABLE GÉNERO EN UN FACTOR CUYOS VALORES SON 'MALE' (SEX == 1) O 'FEMALE' (SEX == 2)
 
