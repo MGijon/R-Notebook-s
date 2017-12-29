@@ -84,10 +84,19 @@ head(Datos)
 Datos$sex <- as.factor(Datos$sex)
 ```
 
+* Usamos la función 'cut' para crear una nueva variable categórica que contenga la edad de los voluntarios: <= 21, 22 - 24, >= 25 AÑOS
+
+```{r}
+Datos$intervalos <- cut(Datos$age, breaks = c( min(Datos$age), 21, 25, max(Datos$age) ), labels = c('<= 21', '22-24', '>= 25' ))
+Datos$age
+```
+ 
+```{r}
+Datos$intervalos
+```
 
 
 ***
-* USAMOS LA FUNCIÓN CUT PARA CREAR UNA NUEVA VARIABLE CATEGÓRICA QUE CONTENGA LA EDAD DE LOS VOLUNTARIOS : <= 21, 22 - 24, >= 25 AÑOS
 
 * CREAR UNA VARIABLE COMPUESTA (COMPOSITE VARIABLE) USANDO LAS VARIABLES corcub, sdmttoco, lnsscore y waisvocd
 de la siguiente manera: se han de estandarizar las 4 variables (para que tengan media 0 y desviaci ́on est ́andar
