@@ -118,6 +118,14 @@ print(round(mean(Datos$Waisvocd , na.rm = TRUE), 3) == 0)
 print(round(sd(Datos$Waisvocd , na.rm = TRUE), 3 ) == 1)
 ```
 
+Ahora creo la nueva variable CV (Composite Variable): REVISAR, NO SÉ SI ESTÁ CORRECTO
+
+```{r}
+Datos$CV <- Datos$Corcub + Datos$Sdmttoco + Datos$Lnsscore + Datos$Waisvocd
+print(summary(Datos$CV))
+print(mean(Datos$CV, na.rm = TRUE))
+print(sd(Datos$CV, na.rm = TRUE))
+```
 
 ***
 
