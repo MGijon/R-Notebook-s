@@ -95,12 +95,31 @@ Datos$age
 Datos$intervalos
 ```
 
+* Crear una variable compuesta (Composite Variable) usando las variables corcub, sdmttoco, lnsscore y waisvocd de la siguiente manera:
+    + Estandarizar las cuatro variables (media 0 y desviación estándar 1).
+    + Sumar los cuatro valores estandarizados.
+    
+
+```{r}
+Datos$Corcub <- scale(Datos$corcub)
+print(round(mean(Datos$Corcub, na.rm = TRUE), 3) == 0)
+print(round(sd(Datos$Corcub, na.rm = TRUE), 3 ) == 1)
+
+Datos$Sdmttoco <- scale(Datos$sdmttoco)
+print(round(mean(Datos$Sdmttoco , na.rm = TRUE), 3) == 0)
+print(round(sd(Datos$Sdmttoco , na.rm = TRUE), 3 ) == 1)
+
+Datos$Lnsscore <- scale(Datos$lnsscore)
+print(round(mean(Datos$Lnsscore, na.rm = TRUE), 3) == 0)
+print(round(sd(Datos$Lnsscore, na.rm = TRUE), 3 ) == 1)
+
+Datos$Waisvocd <- scale(Datos$waisvocd)
+print(round(mean(Datos$Waisvocd , na.rm = TRUE), 3) == 0)
+print(round(sd(Datos$Waisvocd , na.rm = TRUE), 3 ) == 1)
+```
+
 
 ***
-
-* CREAR UNA VARIABLE COMPUESTA (COMPOSITE VARIABLE) USANDO LAS VARIABLES corcub, sdmttoco, lnsscore y waisvocd
-de la siguiente manera: se han de estandarizar las 4 variables (para que tengan media 0 y desviaci ́on est ́andar
-1) y despu ́es sumar los 4 valores (estandarizados).
 
 * MEDIA, MEDIANA, DESVIACIÓN ESTÁNDAR Y RANGO DE LA VARIABLE COMPUESTA DE CADA GRUPO?
 
