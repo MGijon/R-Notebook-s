@@ -38,10 +38,6 @@ XTC$Group <- 'XTC'
 Controles$Group <- 'Control'
 ```
 
-```{r}
-Datos$Group <- as.factor(Datos$Group)
-class(Datos$Group)
-```
 
 * Ahora fusionaremos los datos en un único data.frame. Lo haremos en dos pasos.
 
@@ -51,6 +47,11 @@ Datos <- rbind(temporal, Controles)
 head(Datos)
 ```
 
+```{r}
+Datos$Group <- as.factor(Datos$Group)
+class(Datos$Group)
+```
+
 * Ordenamos el data.frame por el grupo de estudio y el identidicafor de voluntario.
 
 ```{r}
@@ -58,6 +59,7 @@ library(dplyr)
 arrange(Datos, Group, vol) 
 ```
 
+***
 * ¿Cuántos casos (filas) tiene el data.frame enteros y cuántos si se descartan aquellos con algún dato perdido?
 
 ```{r}
@@ -73,8 +75,18 @@ length(Datos$vol)
 ```
 ***
 
-* CONVERTIMOS LA VARIABLE GÉNERO EN UN FACTOR CUYOS VALORES SON 'MALE' (SEX == 1) O 'FEMALE' (SEX == 2)
+* Convertimos la variable género en un factor cuyos valores son 'Male' (sex == 1) o 'Female' (sex == 2)
 
+```{r}
+Datos$sex[which(Datos$sex == 1)] <- 'Male'
+Datos$sex[which(Datos$sex == 2)] <- 'Female'
+head(Datos)
+Datos$sex <- as.factor(Datos$sex)
+```
+
+
+
+***
 * USAMOS LA FUNCIÓN CUT PARA CREAR UNA NUEVA VARIABLE CATEGÓRICA QUE CONTENGA LA EDAD DE LOS VOLUNTARIOS : <= 21, 22 - 24, >= 25 AÑOS
 
 * CREAR UNA VARIABLE COMPUESTA (COMPOSITE VARIABLE) USANDO LAS VARIABLES corcub, sdmttoco, lnsscore y waisvocd
