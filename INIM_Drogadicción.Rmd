@@ -60,7 +60,17 @@ arrange(Datos, Group, vol)
 
 * ¿Cuántos casos (filas) tiene el data.frame enteros y cuántos si se descartan aquellos con algún dato perdido?
 
+```{r}
+summary(Datos)
+```
 
+```{r}
+length(Datos$vol)
+```
+
+```{r}
+
+```
 ***
 
 * CONVERTIMOS LA VARIABLE GÉNERO EN UN FACTOR CUYOS VALORES SON 'MALE' (SEX == 1) O 'FEMALE' (SEX == 2)
