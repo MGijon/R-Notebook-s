@@ -135,15 +135,15 @@ print(mean(Datos$CV[which(Datos$intervalos == '<= 21')], na.rm = TRUE))
 ```
     + Mediana grupo <= 21:
 ```{r}
-print()
+print(median(Datos$CV[which(Datos$intervalos == '<= 21')], na.rm = TRUE))
 ```
     + Desviación estándar grupo <= 21:
 ```{r}
-print()
+print(sd(Datos$CV[which(Datos$intervalos == '<= 21')], na.rm = TRUE))
 ```    
     + Rango del grupo <= 21:
 ```{r}
-print()
+print(IQR(Datos$CV[which(Datos$intervalos == '<= 21')], na.rm = TRUE))
 ```   
     
     
@@ -153,34 +153,33 @@ print(mean(Datos$CV[which(Datos$intervalos == '22-24')], na.rm = TRUE))
 ```
     + Mediana grupo  22-24:
 ```{r}
-print()
+print(median(Datos$CV[which(Datos$intervalos == '22-24')], na.rm = TRUE))
 ```
     + Desviación estándar grupo  22-24:
 ```{r}
-print()
+print(sd(Datos$CV[which(Datos$intervalos == '22-24')], na.rm = TRUE))
 ```    
     + Rango del grupo 22-24:
 ```{r}
-print()
+print(IQR(Datos$CV[which(Datos$intervalos == '22-24')], na.rm = TRUE))
 ```   
     
     
-        + Media grupo >= 25:
+     + Media grupo >= 25:
 ```{r}
 print(mean(Datos$CV[which(Datos$intervalos == '>= 25')], na.rm = TRUE))
 ```
     + Mediana grupo >= 25:
 ```{r}
-Datos$CV[which(Datos$Group == '>= 25')]
-str(Datos)
+print(median(Datos$CV[which(Datos$intervalos == '>= 25')], na.rm = TRUE))
 ```
     + Desviación estándar grupo >= 25:
 ```{r}
-print()
+print(sd(Datos$CV[which(Datos$intervalos == '>= 25')], na.rm = TRUE))
 ```    
     + Rango del grupo >= 25:
 ```{r}
-print()
+print(IQR(Datos$CV[which(Datos$intervalos == '>= 25')], na.rm = TRUE))
 ```   
     
     
