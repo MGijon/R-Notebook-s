@@ -127,9 +127,66 @@ print(mean(Datos$CV, na.rm = TRUE))
 print(sd(Datos$CV, na.rm = TRUE))
 ```
 
-***
+* Media, mediana, desviación estándar y rango de la variable compuesta de cada grupo.
 
-* MEDIA, MEDIANA, DESVIACIÓN ESTÁNDAR Y RANGO DE LA VARIABLE COMPUESTA DE CADA GRUPO?
+    + Media grupo <= 21:
+```{r}
+print(mean(Datos$CV[which(Datos$intervalos == '<= 21')], na.rm = TRUE))
+```
+    + Mediana grupo <= 21:
+```{r}
+print()
+```
+    + Desviación estándar grupo <= 21:
+```{r}
+print()
+```    
+    + Rango del grupo <= 21:
+```{r}
+print()
+```   
+    
+    
+        + Media grupo 22-24:
+```{r}
+print(mean(Datos$CV[which(Datos$intervalos == '22-24')], na.rm = TRUE))
+```
+    + Mediana grupo  22-24:
+```{r}
+print()
+```
+    + Desviación estándar grupo  22-24:
+```{r}
+print()
+```    
+    + Rango del grupo 22-24:
+```{r}
+print()
+```   
+    
+    
+        + Media grupo >= 25:
+```{r}
+print(mean(Datos$CV[which(Datos$intervalos == '>= 25')], na.rm = TRUE))
+```
+    + Mediana grupo >= 25:
+```{r}
+Datos$CV[which(Datos$Group == '>= 25')]
+str(Datos)
+```
+    + Desviación estándar grupo >= 25:
+```{r}
+print()
+```    
+    + Rango del grupo >= 25:
+```{r}
+print()
+```   
+    
+    
+    
+    
+***
 
 * Añadid el data frame creado como nueva tabla a la base de datos StudyENTE.mdb.
 
