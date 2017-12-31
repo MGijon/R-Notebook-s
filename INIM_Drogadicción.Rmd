@@ -71,7 +71,7 @@ length(Datos$vol)
 ```
 
 ```{r}
-
+print('Acabar esta puta sección')
 ```
 ***
 
@@ -185,9 +185,26 @@ print(IQR(Datos$CV[which(Datos$intervalos == '>= 25')], na.rm = TRUE))
 * Representar la distribución condicionada de la variable edad por el grupo de estudio mediante un gráfico de mosaicos.
     
 ```{r}
+tablaCan <- table(Datos$age[which(Datos$Group == 'Cannabis')], dnn = 'Cannabis')
+tablaXTC <- table(Datos$age[which(Datos$Group == 'XTC')], dnn = 'XTC')
+tablaCon <- table(Datos$age[which(Datos$Group == 'Control')], dnn = 'Control')
 
+print(tablaCan)
+print(tablaXTC)
+print(tablaCon)
 ```
 
+```{r}
+mosaicplot(tablaCan)(tablaCan)
+```
+
+```{r}
+mosaicplot(tablaCon)(tablaCon)
+```
+
+```{r}
+mosaicplot(tablaXTC)(tablaXTC)
+```
 
 ***
 
