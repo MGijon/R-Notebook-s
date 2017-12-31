@@ -206,17 +206,17 @@ mosaicplot(tablaCon)(tablaCon)
 mosaicplot(tablaXTC)(tablaXTC)
 ```
 
+
+* Representar la distribución condicionada de la variable edad por grupo de estudio mediante una tabla de contingencia usando la función CrossTable del paquete descr.
+
+```{r}
+#install.packages('descr')
+library(descr)
+CrossTable(Datos$age, Datos$Group)
+```
+
+* Exportad vuestro data frame a un fichero EXCEL de tal manera que el fichero EXCEL contenga una hoja por cada grupo de estudio con nombre igual al grupo de estudio. Las tres hojas del fichero ya no deben contener la variable Group. Podéis usar la función write.xlsx del paquete xlsx o la funcióon write.xlsx del paquete openxls.
+
+
+
 ***
-
-* Representad la distribuci ́on condicionada de la variable edad por grupo de estudio mediante una tabla de
-contingencia usando la funci ́on CrossTable del paquete descr.
-
-* Cerrad la conexi ́on a la base de datos StudyENTE.mdb.
-
-* Exportad vuestro data frame a un fichero EXCEL de tal manera que el fichero EXCEL contenga una hoja por cada grupo de estudio con nombre igual al grupo de estudio. Las tres hojas del fichero ya no deben contener la variable group. Pod ́eis usar la funci ́on write.xlsx del paquete xlsx o la funci ́on write.xlsx del paquete openxlsx.
-
-
-
-
-
-
