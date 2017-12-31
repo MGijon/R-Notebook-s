@@ -217,6 +217,11 @@ CrossTable(Datos$age, Datos$Group)
 
 * Exportad vuestro data frame a un fichero EXCEL de tal manera que el fichero EXCEL contenga una hoja por cada grupo de estudio con nombre igual al grupo de estudio. Las tres hojas del fichero ya no deben contener la variable Group. Podéis usar la función write.xlsx del paquete xlsx o la funcióon write.xlsx del paquete openxls.
 
-
+```{r}
+library(xlsx)
+write.xlsx(Datos[Datos$Group == 'Cannabis',], file =  'Ejercicio1.xlsx', sheetName = "Cannabis",  col.names = TRUE, row.names = TRUE, append = FALSE, showNA = TRUE)
+write.xlsx(Datos[Datos$Group == 'XTC',], file =  'Ejercicio1.xlsx', sheetName = "XTC",  col.names = TRUE, row.names = TRUE, append = TRUE, showNA = TRUE)
+write.xlsx(Datos[Datos$Group == 'Control',], file =  'Ejercicio1.xlsx', sheetName = "Control",  col.names = TRUE, row.names = TRUE, append = TRUE, showNA = TRUE)
+```
 
 ***
