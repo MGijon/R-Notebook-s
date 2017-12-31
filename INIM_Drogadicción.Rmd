@@ -141,7 +141,7 @@ print(median(Datos$CV[which(Datos$intervalos == '<= 21')], na.rm = TRUE))
 ```{r}
 print(sd(Datos$CV[which(Datos$intervalos == '<= 21')], na.rm = TRUE))
 ```    
-    + Rango del grupo <= 21:
+    + Rango (intercuartil) del grupo <= 21:
 ```{r}
 print(IQR(Datos$CV[which(Datos$intervalos == '<= 21')], na.rm = TRUE))
 ```   
@@ -159,7 +159,7 @@ print(median(Datos$CV[which(Datos$intervalos == '22-24')], na.rm = TRUE))
 ```{r}
 print(sd(Datos$CV[which(Datos$intervalos == '22-24')], na.rm = TRUE))
 ```    
-    + Rango del grupo 22-24:
+    + Rango (intercuartil) del grupo 22-24:
 ```{r}
 print(IQR(Datos$CV[which(Datos$intervalos == '22-24')], na.rm = TRUE))
 ```   
@@ -177,23 +177,19 @@ print(median(Datos$CV[which(Datos$intervalos == '>= 25')], na.rm = TRUE))
 ```{r}
 print(sd(Datos$CV[which(Datos$intervalos == '>= 25')], na.rm = TRUE))
 ```    
-    + Rango del grupo >= 25:
+    + Rango (intercuartil) del grupo >= 25:
 ```{r}
 print(IQR(Datos$CV[which(Datos$intervalos == '>= 25')], na.rm = TRUE))
 ```   
     
+* Representar la distribución condicionada de la variable edad por el grupo de estudio mediante un gráfico de mosaicos.
     
-    
-    
+```{r}
+
+```
+
+
 ***
-
-* Añadid el data frame creado como nueva tabla a la base de datos StudyENTE.mdb.
-
-* Utilizad la funci ́on sqlQuery (del paquete RODBC) para extraer (solamente) las variables grupo de estudio y edad
-(categorizada) de la nueva tabla de StudyENTE.mdb
-
-* Representad la distribuci ́on condicionada de la variable edad por grupo de estudio mediante un gr ́afico de
-mosaicos.
 
 * Representad la distribuci ́on condicionada de la variable edad por grupo de estudio mediante una tabla de
 contingencia usando la funci ́on CrossTable del paquete descr.
