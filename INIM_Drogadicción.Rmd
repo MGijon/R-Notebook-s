@@ -351,6 +351,11 @@ ggplot(Datos, aes(factor(Datos$Group), Datos$calcapld)) +
   geom_violin(aes(fill = Datos$Group))
 ```
 
+```{r}
+ggplot(Datos, aes(factor(Datos$Group), Datos$corcub)) +
+  geom_violin(aes(fill = factor(Group)))
+```
+
 
 ```{r}
 # CV : composite variable
@@ -358,6 +363,62 @@ ggplot(Datos, aes(factor(Datos$Group), Datos$CV)) +
   geom_violin(aes(fill = Datos$Group))
 ```
 
+
+   + Segundo tipo de gráfico:
+   
+   ESTE GRÁFICO ES INÚTIL A MÁS NO PODER
+```{r}
+#install.packages('fmsb')
+library(fmsb)
+set.seed(99)
+data1= as.data.frame(matrix( sample( 0:20 , 15 , replace=F) , ncol=5))
+colnames(data1)=c("math" , "english" , "biology" , "music" , "R-coding" )
+rownames(data1)=paste("mister" , letters[1:3] , sep="-")
+
+data = data.frame(
+  id = seq(1,15),
+  #medias = c(Cannabis_calcapld, XTC_calcapld, Controles_calcapld,
+   #          Cannabis_calcaprt, XTC_calcaprt, Controles_calcaprt,
+    #         Cannabis_corcub, XTC_corcub, Controles_corcub,
+     #        Cannabis_sdmttoco, XTC_sdmttoco, Controles_sdmttoco,
+      #       Cannabis_waisvocd, XTC_waisvocd, Controles_waisvocd),
+  grupo = c(1, 2, 3,
+            1, 2, 3,
+            1, 2, 3,
+            1, 2, 3,
+            1, 2, 3),
+  
+  # 1 : Cannabis
+  # 2 : XTC
+  # 3 : Control
+  
+  variables = c (1, 1, 1,
+                 2, 2, 2,
+                 3, 3, 3,
+                 4, 4, 4,
+                 5, 5, 5)
+  # 1 : calcapld
+  # 2 : calcaprt
+  # 3 : corcub
+  # 4 : sdmttoco
+  # 5 : waisvocd
+)
+
+rownames(data) <- c('Cannabis', 'XTC', 'Control',
+            'Cannabis', 'XTC', 'Control',
+            'Cannabis', 'XTC', 'Control',
+            'Cannabis', 'XTC', 'Control',
+            'Cannabis', 'XTC', 'Control')
+
+
+# To use the fmsb package, I have to add 2 lines to the dataframe: the max and min of each topic to show on the plot!
+data1 = rbind(rep(20,5) , rep(0,5) , data1)
+
+# Plot 1: Default radar chart proposed by the library:
+radarchart(data1)
+data
+rep(20, 5)
+```
 
 
 
