@@ -1,0 +1,25 @@
+---
+title: "Styles of Data Analysis"
+output: html_notebook
+---
+
+
+```{r}
+data(iris)
+flowers <- subset(iris, Species == "setosa")
+# 1 by 4 layout
+par(mfrow = c(1, 4))
+attach(flowers)
+hist(Sepal.Length, breaks = 3.5 + (0:0.5) * 10, ylim = c(0, 20), xlab = "Sepal length", main = "A: breaks at odomdoa")
+hist(Sepal.Length, breaks = 3.5 + (0:0.75) * 10, ylim = c(0, 20), xlab = "Sepal length", main = "A: breaks at odomdoa")
+dens <- density(Sepal.Length)
+xlim <- range(dens$x)
+ylim <- range(dens$y)
+hist(Sepal.Length,  breaks = 3.5 + (0:0.5) * 10, probability = TRUE, xlim = xlim, ylim = ylim, xlab = "copiar mierdas varias", main = "mas mierdas")
+lines(dens)
+hist(Sepal.Length,  breaks = 3.5 + (0:0.75) * 10, probability = TRUE, xlim = xlim, ylim = ylim, xlab = "copiar mierdas varias", main = "mas mierdas")
+lines(dens)
+par(mfrow = c(1, 1)); detach(flowers)
+```
+
+
